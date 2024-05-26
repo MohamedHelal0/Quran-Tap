@@ -1,0 +1,503 @@
+:root {
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
+  --default-padding: 2rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* reset */
+.margen_top {
+  margin-top: 8rem;
+}
+/* End reset */
+/* Header */
+.containr {
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (min-width: 600px) and (max-width: 1000px) {
+    margin: 0 20px 0 20px;
+  }
+}
+.m{
+  margin-top: 130px;
+
+}
+.containr__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--default-padding);
+  top: 0;
+  width: 900px;
+  position: static;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: 10px 0;
+
+  
+
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 10px;
+    position: sticky;
+    padding-right: 10px;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+}
+.section__image {
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.icon__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.links__header {
+  margin-right: 20px;
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.img__header {
+  width: 50px;
+  @media (max-width: 600px) {
+    width: 70px;
+  }
+}
+.quran__tap {
+  font-size: medium;
+  font-weight: 500;
+  font-size: 20px;
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
+}
+.link {
+  margin: 8px;
+  font-weight: 300;
+  font-size: 20px;
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
+}
+.link:hover {
+  color: var(--color-soft-red);
+  transition: var(--timing-animation) ease-in-out;
+}
+/* End Header */
+/* section get__quran */
+.get__quran {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+
+  @media (max-width: 600px) {
+    margin: 15px;
+  }
+}
+.in_vewe {
+  opacity: 1;
+  transform: translate(0);
+}
+.head {
+  font-size: 45px;
+  font-family: "Rubik", sans-serif;
+}
+.get__quran--contenet {
+  width: 95%;
+}
+.pargrf {
+  color: var(--color-grayish-blue);
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  /* width: 34vh; */
+}
+.frest__img {
+  width: 410px;
+}
+.button {
+  display: flex;
+  gap: var(--default-padding);
+  margin-top: var(--default-padding);
+}
+.button_Chrome {
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--default-radius);
+  background-color: var(--color-soft-blue);
+  color: var(--color-off-white);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all var(--timing-animation) ease-in-out;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.button_Edge {
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--default-radius);
+  background-color: var(--color-off-white);
+  color: var(--color-very-dark-blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all var(--timing-animation) ease-in-out;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+/* End section get__quran */
+/* download */
+.section__image {
+  @media (max-width: 600px) {
+    display: flex;
+    order: -1;
+  }
+}
+.download__h3 {
+  margin-top: 80px;
+}
+.h2 {
+  margin-left: 32%;
+}
+.p2 {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+.p3 {
+  width: 500px;
+  margin-left: 25%;
+  margin-top: 5px;
+}
+.download {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+}
+.aemashe__sections {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+}
+.in_vewe {
+  opacity: 1;
+  transform: translate(0);
+}
+.download__extantion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: var(--default-radius);
+  width: 25rem;
+  padding: calc(var(--default-padding) * 2) var(--default-padding)
+    var(--default-padding);
+  height: 26rem;
+}
+.download__h3 {
+  margin-top: 0.1%;
+}
+.h2 {
+  margin-top: 80px;
+}
+.download__img {
+  width: 6rem;
+  max-width: 100%;
+  margin-bottom: calc(var(--default-padding) / 2);
+}
+.download__button {
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  margin-top: auto;
+}
+.download__button::before {
+  content: "";
+  top: calc(var(--default-padding) * -1.4);
+  left: calc(var(--default-padding) * -1);
+  right: calc(var(--default-padding) * -1);
+  height: 0.3rem;
+  position: absolute;
+  background: url("../images/bg-dots.svg") repeat-x;
+  background-size: contain;
+}
+.button__disabl {
+  background-color: var(--color-grayish-blue);
+  user-select: none;
+  cursor: not-allowed;
+}
+/* End download */
+/* Frequently Asked Questions */
+
+.faq {
+  max-width: 50rem;
+  margin-top: calc(var(--default-padding) * 1.5);
+  border-top: 1px solid var(--color-grayish-blue);
+  border-bottom: 1px solid var(--color-grayish-blue);
+}
+.faq__row {
+  position: relative;
+  padding: var(--default-padding) 0;
+}
+.faq__row:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-grayish-blue);
+}
+.faq__arrow {
+  width: 1.2rem;
+  max-width: 100%;
+  transition: transform var(--timing-animation) ease-in-out;
+  position: absolute;
+  right: 0;
+  top: calc(var(--default-padding) + 0.6rem);
+}
+.faq__input {
+  display: none;
+}
+.faq__input:checked ~ .faq__answer {
+  max-height: 30rem;
+  padding-top: var(--default-padding);
+  opacity: 1;
+}
+.faq__input:checked ~ .faq__arrow {
+  transform: rotate(180deg);
+}
+.faq__question {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.faq__answer {
+  font-weight: 400;
+  font-size: 1.4rem;
+  overflow: hidden;
+  max-height: 0.1rem;
+  transition: all var(--timing-animation);
+  opacity: 0;
+}
+.section {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--default-padding) * 2);
+}
+@media (max-width: 600px) {
+  .section {
+    flex-wrap: wrap;
+    gap: var(--default-padding);
+  }
+}
+.section:nth-of-type(1) .section__title {
+  font-size: 4.2rem;
+}
+.section--one-column {
+  flex-direction: column;
+  gap: calc(var(--default-padding) / 2);
+}
+.section__title {
+  font-size: 2.4rem;
+}
+.section__description {
+  font-size: 1.4rem;
+  color: var(--color-grayish-blue);
+}
+.section--one-column .section__description {
+  max-width: 50rem;
+  text-align: center;
+}
+.section__buttons {
+  display: flex;
+  gap: var(--default-padding);
+  margin-top: var(--default-padding);
+}
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-off-white);
+  max-width: 100%;
+  height: 80px;
+  margin-top: 100px;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* End footer */
+/* responsev desin */
+
+.get__quran {
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.frest__img {
+  @media (max-width: 600px) {
+    order: -1;
+    width: 100%;
+  }
+}
+.head_h2 {
+  @media (max-width: 600px) {
+    font-size: 50px;
+  }
+}
+.get__quran--contenet {
+  @media (max-width: 600px) {
+    & .head {
+      font-size: 80px;
+    }
+    & .pargrf {
+      font-size: 30px;
+    }
+  }
+}
+.button {
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: space-around;
+    & .button_Chrome {
+      width: 300px;
+      font-size: 26px;
+      padding: 25px;
+      font-family: inherit;
+    }
+    & .button_Edge {
+      width: 300px;
+      font-size: 26px;
+      padding: 25px;
+      font-family: inherit;
+    }
+  }
+}
+/* card dawinlod */
+.h2 {
+  @media (max-width: 600px) {
+    font-size: 40px;
+    margin-left: 100px;
+  }
+}
+& .pargrf {
+  @media (max-width: 600px) {
+    font-size: 18px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.download {
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    opacity: 1;
+    transform: translate(0);
+
+    & .download__extantion {
+      width: 90%;
+      height: 400px;
+
+      & .download__img {
+        width: 100px;
+        margin-top: 30px;
+      }
+      & .download__h3 {
+        font-size: 35px;
+      }
+      & .download__button {
+        font-size: 23px;
+        padding: 30px;
+      }
+    }
+  }
+}
+/* footer */
+.footer {
+  width: 100%;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
